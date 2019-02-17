@@ -147,4 +147,30 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
+<<<<<<< Updated upstream
 AUTH_USER_MODEL = 'manager.UserAccount'
+=======
+AUTH_USER_MODEL = 'manager.UserAccount'
+
+# display e-mail in console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+#ログイン後にトップページにリダイレクト
+LOGIN_REDIRECT_URL = '/'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')], # [追加]
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+>>>>>>> Stashed changes

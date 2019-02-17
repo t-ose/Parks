@@ -38,3 +38,12 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/', manager_view.AccountListView.as_view())
 ]
+<<<<<<< Updated upstream
+=======
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('', include('manager.urls')),
+]
+>>>>>>> Stashed changes
